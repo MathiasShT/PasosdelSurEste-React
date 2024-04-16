@@ -4,9 +4,10 @@ import ProgramCard from './ProgramCard.jsx'
 
 
 function ProgramCardContainer() {
-    const [programs, setPrograms] = useState({})
+    
+  const [programs, setPrograms] = useState([])
   
-    useEffect(() => {
+  /*useEffect(() => {
   const miPromesa = new Promise((res) => {
     setTimeout(() => {
       res (data)
@@ -15,9 +16,9 @@ function ProgramCardContainer() {
   miPromesa.then((res) => {
     console.log(res)
   })
-  .then((Programa) => {
+  miPromesa.then((Programa) => {
     setPrograms(Programa)
-  })
+  })*/
   return (
      <>
       {data.map((program)=>{
@@ -26,7 +27,7 @@ function ProgramCardContainer() {
       })} 
       </>
   )
-  })};
+  }/*)}*/;
         
 
    
