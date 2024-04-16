@@ -1,15 +1,14 @@
-import { Button } from 'antd'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
-function ProgramCard({program}) {
-  const {name, image} = program
-
+function ProgramCard({}) {
+  
   return (
     <div className='hover:scale-105 group program-card'>
-        <img id="imagen" src={image} className="group-hover:scale-110 transition-all duration-500" alt="Imagen atletismo" />
-        <h2>{name}</h2>
-        <Button>Mas informacion</Button>
+        <img id="imagen" src="/LogoPSE.webp" className="group-hover:scale-110 transition-all duration-500" alt="Imagen atletismo" />
+        <h2>Disciplina</h2>
+        <Link to="/descrpcion" >Mas informacion</Link>
     </div>
   )
 }

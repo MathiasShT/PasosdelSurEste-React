@@ -1,7 +1,8 @@
-function Programa (props){
-    return(
-        <article>{props.disciplina}</article>
-    )
-}
+import React from 'react'
+import ProgramCard from '../ProgramCard'
 
-export default Programa
+export default function Programas() {
+  return (
+    <div><ProgramCard/></div>
+  )
+}
