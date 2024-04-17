@@ -5,7 +5,6 @@ import Contacto from '../pages/Contacto'
 import Inicio from '../pages/Inicio'
 import Descripcion from '../pages/Descripcion'
 
-
 function Main() {
     return (
         <main className='p-4 grow'>
