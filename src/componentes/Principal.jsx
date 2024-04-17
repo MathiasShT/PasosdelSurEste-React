@@ -2,14 +2,13 @@ import { Route, Routes } from 'react-router-dom'
 import Programas from '../pages/Programas'
 import Productos from '../pages/Productos'
 import Contacto from '../pages/Contacto'
-import Inicio from '../pages/Inicio'
-import Descripcion from '../pages/Descripcion'
+import Descripcion from '../pages/ItemListDetail'
 
 function Main() {
     return (
         <main className='p-4 grow'>
         <Routes>
-            <Route path='/' element={<Inicio/>}/>
+            <Route path='/' element={<Programas/>}/>
             <Route path='/Programas' element={<Programas/>}/>
             <Route path='/:id' element={<Descripcion/>}/>
             <Route path='/Productos' element={<Productos/>}/>

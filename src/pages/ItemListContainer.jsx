@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import {data} from './database.js'
-import ProgramCard from './ProgramCard.jsx'
+import {data} from '../database.js'
+import ProgramCard from '../ProgramCard.jsx'
 
 
 function ProgramCardContainer() {
     
-  const [programs, setPrograms] = useState([])
+  const [program, setPrograms] = useState([])
   
   useEffect(() => {
   const miPromesa = new Promise((res) => {
@@ -29,8 +29,6 @@ function ProgramCardContainer() {
       </>
   )
   }
-        
-
    
 
 export default ProgramCardContainer
