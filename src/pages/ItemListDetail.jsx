@@ -1,10 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { data } from '../database'
+import { data } from '../ProgramDatabase'
 
 
-function Descripcion(program) {
+function Descripcion() {
 const {id} = useParams()
 const [disciplina, setDisciplina] = useState({})
 useEffect(() => {
@@ -12,9 +12,8 @@ useEffect(() => {
       res(data)  
   })
   miPromesa.then((res) => {
-    console.log(res)
-  })
-  miPromesa.then((descripcion) => {
+
+   const value = res.find(element => element.id === parseInt(id, 10))
     setDisciplina(descripcion)
   })
 },[])

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import {data} from '../database.js'
+import {data} from '../ProgramDatabase.js'
 import ProgramCard from '../ProgramCard.jsx'
+
 
 
 function ProgramCardContainer() {
@@ -31,4 +32,5 @@ function ProgramCardContainer() {
   }
    
 
+  
 export default ProgramCardContainer
