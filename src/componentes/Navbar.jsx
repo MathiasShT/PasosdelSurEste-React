@@ -8,7 +8,6 @@ function Header (){
         </Link>
     <nav className="md:gap-4 md:flex">
       <Link to="/Programas">Programas</Link>
-      <Link to="/Productos">Productos</Link>
       <Link to="/Contacto">Contacto</Link>
       <img src="/Shoppingcart.png" height={30} width={40} id="carrito" alt="Shopping Cart" />
       <p>3</p>

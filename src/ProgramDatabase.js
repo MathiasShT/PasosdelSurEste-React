@@ -2,7 +2,7 @@ export const data = [
     {
         "id": 1,
         "name": "Atletismo",
-        "img": "./atletismo.webp",
+        "img": "/atletismo.webp",
         "description": "Preparacion de carrera de corta, mediana o larga distancia, tanto en calle como en trail."
 
     },

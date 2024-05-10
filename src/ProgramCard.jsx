@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 function ProgramCard({program}) {
   
-  console.log(program)
   const {name, img, id} = program
   return (
     <div className='hover:scale-105 group program-card'>
