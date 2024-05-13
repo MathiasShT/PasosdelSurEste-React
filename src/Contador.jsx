@@ -12,16 +12,16 @@ function Contador(props) {
     }
 
     const consultar = () => {
-        props.onConsulta(numero)
+        props.handleConsulta(numero)
     }
 
   return (
     <>
     <h3>Alumnos</h3>
     <p>{numero}</p>
-    <button onClick={disminuir}>-</button>
-    <button onClick={aumentar}>+</button>
-    <button onClick={consultar}>Enviar Consulta</button>
+    <button onClick={disminuir} className='rounded-full bg-blue-500'>-</button>
+    <button onClick={aumentar} className='rounded-full bg-blue-500'>+</button>
+    <button onClick={consultar}>Consultar</button>
 
 
     </>

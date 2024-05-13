@@ -1,20 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { data } from '../ProgramDatabase'
 import Contador from '../Contador'
 import Swal from 'sweetalert2'
+import { contexto } from '../Context'
 
 
 
 function Descripcion() {
-  const [consulta, setConsulta] = useState(false)
-  const [alumnos, setAlumnos] = useState(0)
-  const onConsulta = (consulta) => {
-    setAlumnos(alumnos)
-    setConsulta(true)
 
+  const valorActual = useContext(contexto)
+  const handleConsulta = (numero) => {
+    console.log(numero, disciplina)
+    valorActual.addToCart(numero, disciplina)
   }
+
   const { id } = useParams()
   const [disciplina, setDisciplina] = useState({})
   useEffect(() => {
@@ -34,18 +35,11 @@ function Descripcion() {
       <h3>{disciplina.name}</h3>
       <img src={disciplina.img} alt={disciplina.name} height={150} width={150} />
       <p>{disciplina.description}</p>
-      {consulta ? Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Se envio su consulta",
-        showConfirmButton: false,
-        timer: 3000
-      }) : <Contador onConsulta={onConsulta} />}
+      <Contador handleConsulta={handleConsulta} />
 
     </>
   )
 }
-
 
 
 export default Descripcion
