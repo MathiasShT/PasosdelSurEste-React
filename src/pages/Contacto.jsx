@@ -12,7 +12,7 @@ export default function Contacto() {
       <Input id='email' text='Email' type="email" placeholder='eMail' />
       <Input id='telefono' text='Celular' type="text" placeholder='Solo numeros' />
       <Input id='mensaje' text='Mensaje' type="text" placeholder='Escriba un mensaje' />
-      <button className='bg-royalblue-500 text-white rounded p-2 border shadow-md'>Enviar</button>
+      <button className='bg-indigo-500 text-white rounded p-2 border shadow-md'>Enviar</button>
 
     </form>
     </>

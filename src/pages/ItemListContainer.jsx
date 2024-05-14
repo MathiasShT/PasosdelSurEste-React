@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
 import { data } from '../ProgramDatabase.js'
 import ProgramCard from '../ProgramCard.jsx'
-import { app } from '../Firebase.js'
-import { collection, getDocs, getFirestore } from 'firebase/firestore'
-
+import { getProducts } from '../Utilities.js'
 
 
 function ProgramCardContainer() {
@@ -12,29 +10,10 @@ function ProgramCardContainer() {
 
   useEffect(() => {
 
-    const bd = getFirestore(app)
-    const disciplinaCollection = collection(bd, "disciplina")
-    const query = getDocs(disciplinaCollection)
-    query
-      .then((resultado) => {
-        const disciplinas = resultado.docs.map(doc => { return doc.data() })
-        setPrograms(disciplinas)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-
-    /*  const miPromesa = new Promise((res) => {
-        setTimeout(() => {
-          res (data)
-        }, 2000)
-      })
-      miPromesa.then((res) => {
-        
-      })
-      miPromesa.then((Programa) => {
-        setPrograms(Programa)
-      })*/
+    getProducts()
+    .then((resultado) => {
+      setPrograms(resultado)
+    })
   }, [])
   return (
     <>

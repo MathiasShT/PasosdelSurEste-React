@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { contexto } from "../Context"
+import CartWidget from "../CartWidget"
 
 
 function Header (){
@@ -18,8 +19,7 @@ const contextValue = useContext(contexto)
       <Link to="/Programas">Programas</Link>
       <Link to="/Contacto">Contacto</Link>
       </section>
-      <img src="/Shoppingcart.png" height={30} width={40} id="carrito" alt="Shopping Cart" />
-      {contextValue.cantCart}
+      <CartWidget/>
     </nav>
     </header>
     )
